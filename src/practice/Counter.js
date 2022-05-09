@@ -1,13 +1,17 @@
 import { useState } from "react";
 
-const Counter = () => {
-  const [count, setCount] = useState(0);
-  const [increment, setIncrement] = useState(1);
+const Counter = ({ initialValue, initialIncrement }) => {
+  const [count, setCount] = useState(initialValue);
+  const [increment, setIncrement] = useState(initialIncrement);
 
   return (
     <div>
       <p>You clicked {count} times</p>
-      <input type="number" onChange={(e) => setIncrement(e.target.value)} />
+      <input
+        type="number"
+        value={initialIncrement}
+        onChange={(e) => setIncrement(e.target.value)}
+      />
       <button onClick={() => setCount(count + Number.parseInt(increment))}>
         Click me
       </button>

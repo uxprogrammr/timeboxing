@@ -18,7 +18,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <Counter />
+        <Counter initialValue={5} initialIncrement={10} />
         <WelcomeMessage name={"Ivan Lim"}>
           <h1>This is a sample message</h1>
           <p>Sample paragraph in children component.</p>
