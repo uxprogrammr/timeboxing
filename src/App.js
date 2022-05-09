@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import Counter from "./practice/Counter";
 
 function WelcomeMessage() {
   return <p>Welcome, Hello React and JSX!</p>;
@@ -12,6 +13,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <Counter />
         <WelcomeMessage />
         <a
           className="App-link"
