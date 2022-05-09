@@ -2,11 +2,11 @@ import logo from "./logo.svg";
 import "./App.css";
 import Counter from "./practice/Counter";
 
-function WelcomeMessage({ children, myprop }) {
+function WelcomeMessage(props) {
   return (
     <div>
-      <p>Welcome, Hello React and JSX! - {myprop}</p>
-      {children}
+      <p>Welcome, Hello React and JSX! - {props.name}</p>
+      {props.children}
     </div>
   );
 }
@@ -19,7 +19,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <Counter />
-        <WelcomeMessage myprop={"Ivan Lim"}>
+        <WelcomeMessage name={"Ivan Lim"}>
           <h1>This is a sample message</h1>
           <p>Sample paragraph in children component.</p>
         </WelcomeMessage>
