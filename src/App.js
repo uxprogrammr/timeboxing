@@ -2,8 +2,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import Counter from "./practice/Counter";
 
-function WelcomeMessage() {
-  return <p>Welcome, Hello React and JSX!</p>;
+function WelcomeMessage({ myprop }) {
+  return <p>Welcome, Hello React and JSX! - {myprop}</p>;
 }
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <Counter />
-        <WelcomeMessage />
+        <WelcomeMessage myprop={"Ivan Lim"} />
         <a
           className="App-link"
           href="https://reactjs.org"
