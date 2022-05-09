@@ -1,37 +1,20 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Counter from "./practice/Counter";
+import { useState } from "react";
 
-function WelcomeMessage(props) {
+const Counter = ({ count, setCount }) => {
   return (
     <div>
-      <p>Welcome, Hello React and JSX! - {props.name}</p>
-      {props.children}
+      <button onClick={() => setCount(count + 1)}>Click me</button>
     </div>
   );
-}
+};
+
 function App() {
+  const [count, setCount] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Counter initialValue={5} initialIncrement={10} />
-        <WelcomeMessage name={"Ivan Lim"}>
-          <h1>This is a sample message</h1>
-          <p>Sample paragraph in children component.</p>
-        </WelcomeMessage>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>You clicked {count} times</p>
+      <Counter setCount={setCount} count={count} />
     </div>
   );
 }
